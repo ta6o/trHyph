@@ -28,10 +28,10 @@ Yakup Cetinkaya, December 2010
 """
 
 import sys
-
+coding = "iso8859_9"
 consonants = [u"b",u"c",u"ç",u"d",u"f",u"g",u"ğ",u"h",u"j",u"k",u"l",u"m",u"n",u"p",u"r",u"s",u"ş",u"t",u"v",u"y",u"z"]
 vowels = [u"a",u"e",u"ı",u"i",u"o",u"ö",u"u",u"ü"]
-tokens = []
+tokens = [coding+"\n"]
 
 for i in range(0,len(vowels)):
 	for j in range(0,len(vowels)):
@@ -54,5 +54,5 @@ for i in range(0,len(consonants)):
 
 f = open("hyph_tr.dic","w")
 for t in tokens:
-	f.write(t.encode("iso8859_9")+"\n")
+	f.write(t.encode(coding)+"\n")
 f.close()
